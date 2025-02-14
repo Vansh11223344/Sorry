@@ -1,0 +1,160 @@
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  animation: backgroundChange 18s infinite; /* Smooth color change across 18 seconds */
+  background-size: 200% 200%;
+}
+
+/* Gradually fade between beautiful, neon-themed, love colors */
+@keyframes backgroundChange {
+  0% {
+    background: linear-gradient(135deg, #ff1493, #ff50eb); /* Neon pink and coral */
+  }
+  20% {
+    background: linear-gradient(135deg, #00ffff, #00bfff); /* Cyan and deep sky blue */
+  }
+  40% {
+    background: linear-gradient(135deg, #ff69b4, #ff4500); /* Neon pink and orange red */
+  }
+  60% {
+    background: linear-gradient(135deg, #adff2f, #32cd32); /* Neon green and lime green */
+  }
+  80% {
+    background: linear-gradient(135deg, #ff4500, #ff1493); /* Orange-red and neon pink */
+  }
+  100% {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c); /* Soft pink tones */
+  }
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: background-color 3s ease; /* Smooth fade for content background */
+}
+
+h1 {
+  color: #ff4d6d;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#accepted {
+  background-color: #4caf50;
+  color: white;
+}
+
+#accepted:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+#rejected {
+  background-color: #ff4d6d;
+  color: white;
+}
+
+#rejected:hover {
+  background-color: #ff1a40;
+  transform: scale(1.1);
+}
+
+#try-again-message {
+  margin-top: 20px;
+  color: #ff4d6d;
+  font-size: 1.2rem;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+#final-message {
+  margin-top: 30px;
+}
+
+#final-message h2 {
+  color: #ff4d6d;
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* Heart Decoration */
+.container::before,
+.container::after {
+  content: '💖';
+  position: absolute;
+  font-size: 2rem;
+  animation: float 3s infinite ease-in-out;
+}
+
+.container::before {
+  top: -50px;
+  left: -50px;
+}
+
+.container::after {
+  bottom: -50px;
+  right: -50px;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
