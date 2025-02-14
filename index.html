@@ -7,22 +7,32 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="apology-box">
-      <h1>I'm Really Sorry!</h1>
-      <p>I know I messed up, and I regret it deeply. Please forgive me. Our friendship means a lot to me SP, and I'm really really regretting what i have done. 💖</p>
-      <div class="buttons">
-        <button id="accepted">Sorry Accepted</button>
-        <button id="rejected">Sorry Rejected</button>
+  <div id="date-check" class="container">
+    <h1>Enter Your Birth Date</h1>
+    <input type="date" id="birth-date" />
+    <button id="submit-date">Submit</button>
+    <p id="error-message" class="hidden" style="color: red;">This message is not for you. Try again later!</p>
+  </div>
+
+  <div id="main-content" class="hidden">
+    <div class="container">
+      <div class="apology-box">
+        <h1>I'm Really Sorry!</h1>
+        <p>I know I messed up, and I regret it deeply. Please forgive me. Our friendship means a lot to me SP, and I'm really really regretting what I have done. 💖</p>
+        <div class="buttons">
+          <button id="accepted">Sorry Accepted</button>
+          <button id="rejected">Sorry Rejected</button>
+        </div>
+        <div id="try-again-message" class="hidden">
+          <p>Come on, try clicking "Sorry Accepted"! 😊</p>
+        </div>
       </div>
-      <div id="try-again-message" class="hidden">
-        <p>Come on, try clicking "Sorry Accepted"! 😊</p>
+      <div id="final-message" class="hidden">
+        <h2>Now Message him and tell him that sorry is accepted and order that idiot not to do this again.</h2>
       </div>
-    </div>
-    <div id="final-message" class="hidden">
-      <h2>Now Message him and tell him that sorry is accepted and order that idiot not to do this again.</h2>
     </div>
   </div>
+
   <audio id="background-music" loop>
     <source src="romantic-music.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
